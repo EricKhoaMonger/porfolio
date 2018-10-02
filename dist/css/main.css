@@ -76,6 +76,7 @@
     text-transform: uppercase;
     padding: 1rem 0;
     text-decoration: none;
+    color: #fff;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
       color: #ffc107; }
@@ -97,7 +98,7 @@
 
 body {
   background: #111;
-  color: white;
+  color: #fff;
   height: 100%;
   margin: 0;
   font-family: fantasy;
@@ -130,8 +131,7 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.5rem 1.4rem;
-    background: rgba(22, 22, 22, 0.5);
-    width: fit-content; }
+    background: rgba(22, 22, 22, 0.5); }
 
 a {
   color: #fff;
@@ -159,16 +159,51 @@ main {
     overflow: hidden; }
     main#home h1 {
       margin-top: 25vh; }
+  main#about .bio-section {
+    display: grid;
+    grid-template-areas: 'bioimg biotext biotext' 'job1 job2 .';
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem; }
+    main#about .bio-section .bio-img {
+      width: 250px;
+      height: 250px;
+      background: url("../img/brand.jpg") no-repeat;
+      background-position: 75% 100%;
+      background-size: cover;
+      border-radius: 50%;
+      border: 1px solid #ffc107;
+      grid-area: bioimg;
+      justify-self: center; }
+    main#about .bio-section .bio-text {
+      grid-area: biotext;
+      align-self: center; }
+    main#about .bio-section .job-1 {
+      grid-area: job1; }
+    main#about .bio-section .job-2 {
+      grid-area: job2; }
+    main#about .bio-section .job {
+      background: #373737;
+      padding: 1rem;
+      border-bottom: 5px solid #ffc107; }
+    main#about .bio-section .bio-text p,
+    main#about .bio-section .job p,
+    main#about .bio-section .job h4 {
+      font-family: sans-serif; }
+
+@media screen and (max-width: 992px) {
+  main#about .bio-section {
+    grid-template-areas: 'bioimg' 'biotext' 'job1' 'job2';
+    grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 768px) {
   main {
     align-items: center;
     text-align: center; }
-  .lg-heading {
-    line-height: 1;
-    margin-bottom: 1rem; }
-  .sm-heading {
-    width: unset; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+    main .sm-heading {
+      width: unset; }
   ul.menu-nav,
   div.menu-branding {
     float: none;

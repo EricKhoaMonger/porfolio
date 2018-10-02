@@ -28,6 +28,27 @@ $home-img: url(../img/background.jpeg);
     }
 }
 
+@mixin brandingPortrait {
+    width: 250px;
+    height: 250px;
+    background: url('../img/brand.jpg') no-repeat;
+    background-position: 75% 100%;
+    background-size: cover;
+    border-radius: 50%;
+    border: 1px solid $secondary-color;
+}
+
+// Set text color
+@function set-text-color($color) {
+    @if (lightness($color) > 40) {
+        @return #000
+    }
+
+    @else {
+        @return #fff
+    }
+}
+
 // media query mixins
 @mixin mediaSm {
     @media screen and (max-width: 500px) {
@@ -42,13 +63,13 @@ $home-img: url(../img/background.jpeg);
 }
 
 @mixin mediaLg {
-    @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @media screen and (max-width: 992px) {
         @content;
     }
 }
 
 @mixin mediaXl {
-    @media screen and (min-width: 1171px) {
+    @media screen and (max-width: 1220px) {
         @content;
     }
 }

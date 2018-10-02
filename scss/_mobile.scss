@@ -2,23 +2,36 @@
 @include mediaXl {}
 
 // Desktop
-@include mediaLg {}
+@include mediaLg {
+    main#about {
+        .bio-section {
+            grid-template-areas:
+                'bioimg'
+                'biotext'
+                'job1'
+                'job2';
+            grid-template-columns: 1fr;
+        }
+    }
+}
 
 // Tablet & laptop
 @include mediaMd {
     main {
         align-items: center;
         text-align: center;
+
+        .lg-heading {
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .sm-heading {
+            width: unset;
+        }
     }
 
-    .lg-heading {
-        line-height: 1;
-        margin-bottom: 1rem;
-    }
 
-    .sm-heading {
-        width: unset;
-    }
 
     ul.menu-nav,
     div.menu-branding {
@@ -42,6 +55,11 @@
             height: 150px;
         }
     }
+
+
+
+
+
 }
 
 // Smartphone

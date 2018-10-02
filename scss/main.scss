@@ -9,7 +9,7 @@
 body {
     @include background();
     background: $primary-color;
-    color: white;
+    color: set-text-color($primary-color);
     height: 100%;
     margin: 0;
     font-family: fantasy;
@@ -31,7 +31,7 @@ h3 {
         margin-bottom: 2rem;
         padding: 0.5rem 1.4rem;
         background: rgba(lighten($primary-color, 2), 0.5);
-        width: fit-content;
+
     }
 }
 
@@ -72,6 +72,49 @@ main {
 
         h1 {
             margin-top: 25vh;
+        }
+    }
+
+    &#about {
+
+        .bio-section {
+            display: grid;
+            grid-template-areas:
+                'bioimg biotext biotext'
+                'job1 job2 .';
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 2rem;
+
+            .bio-img {
+                @include brandingPortrait;
+                grid-area: bioimg;
+                justify-self: center;
+            }
+
+            .bio-text {
+                grid-area: biotext;
+                align-self: center;
+            }
+
+            .job-1 {
+                grid-area: job1;
+            }
+
+            .job-2 {
+                grid-area: job2;
+            }
+
+            .job {
+                background: lighten($color: $primary-color, $amount: 15);
+                padding: 1rem;
+                border-bottom: 5px solid $secondary-color;
+            }
+
+            .bio-text p,
+            .job p,
+            .job h4 {
+                font-family: sans-serif;
+            }
         }
     }
 }
