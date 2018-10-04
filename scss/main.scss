@@ -36,7 +36,7 @@ h3 {
 }
 
 a {
-    color: #fff;
+    color: set-text-color($primary-color);
     text-decoration: none;
 }
 
@@ -48,6 +48,14 @@ header {
 
 .text-secondary {
     color: $secondary-color;
+}
+
+.text-sans-serif {
+    font-family: sans-serif;
+}
+
+.responsive-img {
+    max-width: 100%;
 }
 
 main {
@@ -80,9 +88,9 @@ main {
         .bio-section {
             display: grid;
             grid-template-areas:
-                'bioimg biotext biotext'
-                'job1 job2 .';
-            grid-template-columns: repeat(3, 1fr);
+                'bioimg biotext biotext biotext'
+                'job1 job1 job2 job2';
+            grid-template-columns: repeat(4, 1fr);
             grid-gap: 2rem;
 
             .bio-img {
@@ -109,11 +117,95 @@ main {
                 padding: 1rem;
                 border-bottom: 5px solid $secondary-color;
             }
+        }
+    }
 
-            .bio-text p,
-            .job p,
-            .job h4 {
-                font-family: sans-serif;
+    &#work {
+        .project-section {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 0.8rem;
+
+            .project {
+                // background: lighten($color: $primary-color, $amount: 15);
+                padding: 1rem;
+                display: flex;
+                flex-flow: column;
+                border: 3px solid #ccc;
+
+                &-header {
+                    margin-bottom: 1rem;
+                    height: 80px;
+                    overflow: hidden;
+                }
+
+                &-body {
+                    height: 15rem;
+                    overflow: hidden;
+                    // border: 4px solid $secondary-color;
+                    // background: #000;
+                    display: flex;
+                    justify-content: space-around;
+
+                    &-img {
+                        height: 100%;
+                        margin: auto;
+                    }
+                }
+
+                &-footer {
+                    display: flex;
+
+                    &-btn {
+                        display: block;
+                        margin-top: 0.5rem;
+                        // border-radius: 5px;
+                        @include easeOut;
+                    }
+
+                    .btn-github {
+                        // background: #111;
+                        color: set-text-color($primary-color);
+                        padding: 0.5rem 0.8rem;
+                    }
+
+                    .btn-youtube {
+                        // background: set-text-color($primary-color);
+                        color: red;
+                        padding: 0.5rem 0.7rem;
+
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    &#contact {
+        .contact-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+            .contact {
+                display: flex;
+                align-items: center;
+                font-size: 1.5rem;
+                border: 2px solid set-text-color($secondary-color);
+                padding: 1rem 1.5rem;
+                margin-bottom: 2rem;
+                @include easeOut;
+
+                &:hover {
+                    padding: 0.3rem 0.8rem;
+                    background: $secondary-color;
+                    color: set-text-color($secondary-color);
+
+                    .contact-category {
+                        color: set-text-color($secondary-color);
+                    }
+                }
             }
         }
     }
