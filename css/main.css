@@ -9,7 +9,7 @@
     width: 1.7rem;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #000;
+    background: #fff;
     transition: all 0.5s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
@@ -40,14 +40,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #f2f2f2;
+    background: #040404;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #fff;
+    background: #111;
     transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
@@ -76,7 +76,7 @@
     text-transform: uppercase;
     padding: 1rem 0;
     text-decoration: none;
-    color: #000;
+    color: #fff;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
       color: #ffc107; }
@@ -97,8 +97,8 @@
   box-sizing: border-box; }
 
 body {
-  background: #fff;
-  color: #000;
+  background: #111;
+  color: #fff;
   height: 100%;
   margin: 0;
   font-family: fantasy;
@@ -114,7 +114,7 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(17, 17, 17, 0.6);
     z-index: -1; }
 
 h1,
@@ -131,10 +131,10 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.5rem 1.4rem;
-    background: rgba(255, 255, 255, 0.5); }
+    background: rgba(22, 22, 22, 0.5); }
 
 a {
-  color: #000;
+  color: #fff;
   text-decoration: none; }
 
 header {
@@ -188,7 +188,7 @@ main {
     main#about .bio-section .job-2 {
       grid-area: job2; }
     main#about .bio-section .job {
-      background: white;
+      background: #373737;
       padding: 1rem;
       border-bottom: 5px solid #ffc107; }
   main#work .project-section {
@@ -219,7 +219,7 @@ main {
           margin-top: 0.5rem;
           transition: all 0.5s ease-out; }
         main#work .project-section .project-footer .btn-github {
-          color: #000;
+          color: #fff;
           padding: 0.5rem 0.8rem; }
         main#work .project-section .project-footer .btn-youtube {
           color: red;
@@ -232,7 +232,7 @@ main {
       display: flex;
       align-items: center;
       font-size: 1.5rem;
-      border: 2px solid #000;
+      border: 2px solid #fff;
       padding: 1rem 1.5rem;
       margin-bottom: 2rem;
       transition: all 0.5s ease-out; }
