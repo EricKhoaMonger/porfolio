@@ -286,4 +286,10 @@ main {
     margin-top: 20vh;
     font-size: 4rem; }
   main#work .project-section {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  main#contact {
+    padding: 4rem 2rem; }
+    main#contact .contact-section .contact .contact-category {
+      font-size: 22px; }
+    main#contact .contact-section .contact .contact-detail {
+      font-size: 16px; } }
