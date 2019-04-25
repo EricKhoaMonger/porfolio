@@ -167,7 +167,7 @@ main {
       margin-top: 25vh; }
   main#about .bio-section {
     display: grid;
-    grid-template-areas: 'bioimg biotext biotext biotext' 'job1 job1 job2 job2';
+    grid-template-areas: 'bioimg biotext biotext biotext' 'job1 job1 job2 job2' 'job3 job3 .... ....';
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2rem; }
     main#about .bio-section .bio-img {
@@ -187,6 +187,8 @@ main {
       grid-area: job1; }
     main#about .bio-section .job-2 {
       grid-area: job2; }
+    main#about .bio-section .job-3 {
+      grid-area: job3; }
     main#about .bio-section .job {
       background: #373737;
       padding: 1rem;
