@@ -73,6 +73,8 @@
             grid-template-columns: repeat(2, 1fr);
         }
     }
+
+
 }
 
 // Smartphone
@@ -85,6 +87,21 @@
     main#work {
         .project-section {
             grid-template-columns: 1fr;
+        }
+    }
+
+    main#contact {
+        padding: 4rem 2rem;
+
+        .contact-section {
+            .contact {
+                .contact-category {
+                    font-size: 22px;
+                }
+                .contact-detail {
+                    font-size: 16px;
+                }
+            }
         }
     }
 }

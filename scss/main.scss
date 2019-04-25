@@ -89,7 +89,8 @@ main {
             display: grid;
             grid-template-areas:
                 'bioimg biotext biotext biotext'
-                'job1 job1 job2 job2';
+                'job1 job1 job2 job2'
+                'job3 job3 .... ....';
             grid-template-columns: repeat(4, 1fr);
             grid-gap: 2rem;
 
@@ -104,12 +105,10 @@ main {
                 align-self: center;
             }
 
-            .job-1 {
-                grid-area: job1;
-            }
-
-            .job-2 {
-                grid-area: job2;
+            @for $i from 1 to 4 {
+                .job-#{$i} {
+                    grid-area: job#{$i};
+                }
             }
 
             .job {
@@ -192,7 +191,7 @@ main {
                 display: flex;
                 align-items: center;
                 font-size: 1.5rem;
-                border: 2px solid set-text-color($secondary-color);
+                border: 2px solid set-text-color($primary-color);
                 padding: 1rem 1.5rem;
                 margin-bottom: 2rem;
                 @include easeOut;
